@@ -1,2 +1,4 @@
-__pycache__
-.checkpoints  
+__pycache__/
+checkpoints/
+page_source_checkpoint_*.html
+  
