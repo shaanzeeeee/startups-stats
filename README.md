@@ -61,7 +61,7 @@ I was really surprised to see that the actual number of people it takes to start
 This plot is great because it shows me exactly which industries are total gambles and which ones are more like "safe" bets. I saw that stuff like **social media apps** have a super high failure rate of over 50%, which is honestly pretty scary for a founder. On the other hand, healthcare and industrial startups seem to have a much better chance of actually going public. It indicates to me that while social apps might be easier to start, the harder industries like biotech actually have a much clearer path to becoming a huge, public company.
 
 ---
-(https://github.com/user-attachments/assets/ede107f5-25e7-4447-8793-35cda03903d6)
+
 ## The Scraping Process
 
 ### Stage 1: API-Driven Extraction (`yc_scraper.py`)
