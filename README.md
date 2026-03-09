@@ -1,4 +1,4 @@
-# Y Combinator Startup Ecosystem: A Comprehensive Data Analysis
+## Startups Stats
 
 ## Project Overview
 This project provides an end-to-end pipeline for extracting, cleaning, and analyzing data from the **Y Combinator (YC) Directory**. By bypassing standard UI limitations through direct API interaction and targeted HTML parsing, we have compiled a dataset of **5,800+ startups** with 100% coverage.
@@ -19,39 +19,41 @@ The final dataset is visualized in an interactive Tableau dashboard to surface m
 ## Key Analytical Insights
 
 ### 1. Global Hub Concentration
-The data highlights a significant geographic centralisation within the United States. Despite the rise of global entrepreneurship, the US remains the primary epicenter for venture-backed talent. Notably, **San Francisco accounts for approximately 43% of all companies** in the dataset, underscoring the enduring importance of proximity to capital and specialized talent pools.
+When I look at the whole world map, it’s honestly crazy how much the US dominates the entire startup scene. Even though people always talk about how you can start a company from a laptop anywhere, the data shows that the US is still the main hub for tech. Within the US, San Francisco and New York are the absolute hotspots, with San Francisco alone making up about **43% of all the companies** in the dataset. It basically proves to me that even in a digital world, if you're starting a company, you still want to be physically located right where all the top investors and tech talent are hanging out.
 
 ![Geographical Concentration Map](https://github.com/user-attachments/assets/343d4546-5c6e-4c96-9cf9-b17d3c55d760)
 
 ### 2. Strategic Shift to B2B and SaaS
-Analysis of industry trends over time reveals a maturation of the startup ecosystem. Early YC batches featured a higher proportion of consumer-facing applications. However, modern cohorts show a clear pivot toward **B2B (Business-to-Business) and SaaS (Software as a Service)** models. This shift indicates a move toward high-retention enterprise solutions over more volatile consumer markets.
+I noticed a really interesting change when looking at how industries have shifted over the years. Back in the early days of YC, there were a lot more apps being built for regular people to use, but now it seems like almost everything has moved toward **B2B and SaaS**. It feels like the "easy" consumer apps have already been made, so now most founders are building complex software and tools for other businesses to use. This indicates to me that the startup world is maturing, and founders are focusing more on building stable products that other companies actually need to pay for to stay in business.
 
 ![Industry Shift Trends](https://github.com/user-attachments/assets/ede107f5-25e7-4447-8793-35cda03903d6)
 
 ### 3. Sustainability of Remote Operations
-While the 2021 pandemic triggered a massive spike in remote-first startups, the trend has established a new baseline rather than reverting to pre-2020 levels. Currently, **roughly 30% of new startups** choose remote operations, suggesting that distributed teams have evolved into a viable, long-term structural strategy for early-stage companies.
-
+The whole remote work thing isn’t just a temporary phase that happened a few years ago; it actually seems to be sticking around as a new normal. I saw a giant spike in 2021 when everyone was stuck at home, but even though it’s dropped a bit since then, **about 30% of new startups** are still choosing to be remote. This tells me that a lot of founders realized they can hire the smartest people from all over the world without making them move to an expensive city. It’s definitely not the "office-only" world it used to be back in the early 2010s.
 ![Remote vs Office Trends](https://github.com/user-attachments/assets/850d0ba0-bb0f-4ee2-ac8d-1451e8d7beac)
 
-### 4. Long-term Survival and Cohort Analysis
-Survival metrics require a multi-year lens to reach statistical significance. While recent batches (2023-2024) show high survival rates (>90%), historical data from 2010-2015 shows that **long-term survival stabilizes around 70%**. This 10-year window is the typical horizon for acquisition, IPO, or market exit.
 
+
+
+### 4. Survival vs. Acquisition Rate
+This chart taught me that I have to be really patient when looking at how successful a startup batch actually is. The new groups from 2024 look amazing because they have like a 95% survival rate, but that’s really just because they haven't been around long enough to fail yet. When I look at the older groups from ten or fifteen years ago, I can see the "true" story where the **survival rate settles around 70%**. It shows me that it usually takes a full decade for a company to either get bought out, go public, or unfortunately run out of money.
 ![Survival and Acquisition Cohorts](https://github.com/user-attachments/assets/922b151a-4719-4e67-8a53-36be55b48138)
 
-### 5. Vertical Growth of Artificial Intelligence
-Artificial Intelligence has transitioned from a niche category to a foundational requirement. Since late 2022, the growth curve for AI-focused startups has outpaced all other sectors in YC history. AI is increasingly integrated as a core feature of the tech stack across all industries rather than being treated as a standalone vertical.
 
+### 5. Year-Over-Year Growth
+The growth chart for **AI** is probably the most insane thing I found in the whole project. While normal software and SaaS have stayed pretty steady for a long time, the growth line for AI just shoots straight up like a rocket starting around late 2022. It indicates to me that AI isn't just a small niche or a passing trend anymore. It’s basically becoming the required baseline for almost every single company I see getting started today, and it’s growing way faster than any other category in YC history.
 ![YoY Growth by Technology](https://github.com/user-attachments/assets/9b78b883-d8e7-4e73-8f64-1e2e55dffd33)
 
-### 6. Lean Team Efficiency
-The headcount required to launch and scale a startup is decreasing. Historically, team sizes were larger at the early stages; however, modern startups are frequently launched by **lean teams of 2 to 3 founders**. The proliferation of AI-assisted development tools and automated infrastructure is enabling "high-output, low-headcount" efficiency.
+### 6. Team Size Trend
 
+I was really surprised to see that the actual number of people it takes to start a company is getting much smaller. Back in 2018, the average team size was much higher, but now it’s usually just a tiny group of **2 or 3 founders**. With all the new AI coding tools and automated software available now, I think a really small, smart team can do today what used to take a whole office full of people. It shows me that startups are becoming way more efficient and can do a lot more with a lot less headcount.
 ![Average Team Size Evolution](https://github.com/user-attachments/assets/4bdb9ca7-4ffe-44c7-a86f-33142c0ed4bb)
 
-### 7. Sector-Specific Risk Assessment
-The data reveals clear risk/reward profiles across sectors. High-volatility sectors like **Social Media show failure rates exceeding 50%**, whereas highly regulated or technical sectors such as **Healthcare and Biotech show higher rates of public exit**. This suggests that while barriers to entry are higher in specialized sectors, their long-term stability is significantly greater.
 
-![Sector Risk/Reward Scatter Plot](https://github.com/user-attachments/assets/a427642e-660e-48c4-bba1-40e04e0311f5)
+### 7. Risk vs. Reward (Sectors)
+
+This plot is great because it shows me exactly which industries are total gambles and which ones are more like "safe" bets. I saw that stuff like **social media apps** have a super high failure rate of over 50%, which is honestly pretty scary for a founder. On the other hand, healthcare and industrial startups seem to have a much better chance of actually going public. It indicates to me that while social apps might be easier to start, the harder industries like biotech actually have a much clearer path to becoming a huge, public company.
+![**Sector Risk/Reward Scatter Plot**](https://github.com/user-attachments/assets/a427642e-660e-48c4-bba1-40e04e0311f5)
 
 ---
 
