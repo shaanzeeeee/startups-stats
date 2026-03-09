@@ -1,92 +1,74 @@
-# Y Combinator Startups Statistics & Scraping Project
+# Y Combinator Startup Ecosystem: A Comprehensive Data Analysis
 
 ## Project Overview
-This project focuses on extracting and enriching a comprehensive dataset of **~5,700 startups** from the **Y Combinator (YC) Directory**. My primary goal was to build a reliable, clean, and high-integrity dataset that captures the evolution of the startup ecosystem across multiple batches and industries.
+This project provides an end-to-end pipeline for extracting, cleaning, and analyzing data from the **Y Combinator (YC) Directory**. By bypassing standard UI limitations through direct API interaction and targeted HTML parsing, we have compiled a dataset of **5,800+ startups** with 100% coverage.
 
-The dataset provides insights into company growth (Team Size), geographic distribution, and operational status (Active vs. Inactive).
-
-From a data analysis standpoint, this project addresses several critical challenges:
-* **Data Completeness**: Standard UI scraping often hits pagination limits (usually 1,000 results). By pivoting to the underlying Algolia search API, we achieved 100% coverage of all 5,700+ companies.
-* **Data Integrity**: Implementing a batch-by-batch extraction system ensured that no records were duplicated or missed during the process.
-* **Enrichment**: A two-stage scraping process was used to first gather structural data (API) and then enrich it with deep page-level details (HTML parsing).
+The analysis focuses on historical evolution, industry shifts, and survival cohorts, offering a high-integrity view of the startup landscape from 2005 to 2024.
 
 ---
 
-## Dashboard & Visualizations
-The final dataset was analyzed and visualized in Tableau to uncover trends in the startup landscape. 
+## Interactive Dashboard
+The final dataset is visualized in an interactive Tableau dashboard to surface multi-dimensional trends in growth, geography, and survival.
 
-**View the Interactive Dashboard here:** [**Startup Stats on Tableau Public**](https://public.tableau.com/app/profile/md.mahinuzzaman.shaan/viz/startups-stats/StartupStats)
+**Dashboard Link:** [**Visualizing the YC Startup Ecosystem on Tableau Public**](https://public.tableau.com/app/profile/md.mahinuzzaman.shaan/viz/startups-stats/StartupStats)
 
-![**Full Dashboard Overview**](https://github.com/user-attachments/assets/ea76850a-d721-4d13-94f7-91eb77e2d1e1)
-
----
-
-## Key Insights
-
-**Main Insights Panel**
-
-### 1. Geographical Concentration
-![**Geographical Concentration Map**](https://github.com/user-attachments/assets/343d4546-5c6e-4c96-9cf9-b17d3c55d760)
-
-When I look at the whole world map, it’s honestly crazy how much the US dominates the entire startup scene. Even though people always talk about how you can start a company from a laptop anywhere, the data shows that the US is still the main hub for tech. Within the US, San Francisco and New York are the absolute hotspots, with San Francisco alone making up about **43% of all the companies** in the dataset. It basically proves to me that even in a digital world, if you're starting a company, you still want to be physically located right where all the top investors and tech talent are hanging out.
-
-### 2. Dominant Industry Shift
-![**Industry Shift Trends**](https://github.com/user-attachments/assets/ede107f5-25e7-4447-8793-35cda03903d6)
-
-I noticed a really interesting change when looking at how industries have shifted over the years. Back in the early days of YC, there were a lot more apps being built for regular people to use, but now it seems like almost everything has moved toward **B2B and SaaS**. It feels like the "easy" consumer apps have already been made, so now most founders are building complex software and tools for other businesses to use. This indicates to me that the startup world is maturing, and founders are focusing more on building stable products that other companies actually need to pay for to stay in business.
-
-### 3. Remote Trend
-![**Remote vs Office Trends**](https://github.com/user-attachments/assets/850d0ba0-bb0f-4ee2-ac8d-1451e8d7beac)
-
-The whole remote work thing isn’t just a temporary phase that happened a few years ago; it actually seems to be sticking around as a new normal. I saw a giant spike in 2021 when everyone was stuck at home, but even though it’s dropped a bit since then, **about 30% of new startups** are still choosing to be remote. This tells me that a lot of founders realized they can hire the smartest people from all over the world without making them move to an expensive city. It’s definitely not the "office-only" world it used to be back in the early 2010s.
-
-### 4. Survival vs. Acquisition Rate
-![**Survival and Acquisition Cohorts**](https://github.com/user-attachments/assets/922b151a-4719-4e67-8a53-36be55b48138)
-
-This chart taught me that I have to be really patient when looking at how successful a startup batch actually is. The new groups from 2024 look amazing because they have like a 95% survival rate, but that’s really just because they haven't been around long enough to fail yet. When I look at the older groups from ten or fifteen years ago, I can see the "true" story where the **survival rate settles around 70%**. It shows me that it usually takes a full decade for a company to either get bought out, go public, or unfortunately run out of money.
-
-### 5. Year-Over-Year Growth
-![**YoY Growth by Technology**](https://github.com/user-attachments/assets/9b78b883-d8e7-4e73-8f64-1e2e55dffd33)
-
-The growth chart for **AI** is probably the most insane thing I found in the whole project. While normal software and SaaS have stayed pretty steady for a long time, the growth line for AI just shoots straight up like a rocket starting around late 2022. It indicates to me that AI isn't just a small niche or a passing trend anymore. It’s basically becoming the required baseline for almost every single company I see getting started today, and it’s growing way faster than any other category in YC history.
-
-### 6. Team Size Trend
-![**Average Team Size Evolution**](https://github.com/user-attachments/assets/4bdb9ca7-4ffe-44c7-a86f-33142c0ed4bb)
-
-I was really surprised to see that the actual number of people it takes to start a company is getting much smaller. Back in 2018, the average team size was much higher, but now it’s usually just a tiny group of **2 or 3 founders**. With all the new AI coding tools and automated software available now, I think a really small, smart team can do today what used to take a whole office full of people. It shows me that startups are becoming way more efficient and can do a lot more with a lot less headcount.
-
-### 7. Risk vs. Reward (Sectors)
-![**Sector Risk/Reward Scatter Plot**](https://github.com/user-attachments/assets/a427642e-660e-48c4-bba1-40e04e0311f5)
-
-This plot is great because it shows me exactly which industries are total gambles and which ones are more like "safe" bets. I saw that stuff like **social media apps** have a super high failure rate of over 50%, which is honestly pretty scary for a founder. On the other hand, healthcare and industrial startups seem to have a much better chance of actually going public. It indicates to me that while social apps might be easier to start, the harder industries like biotech actually have a much clearer path to becoming a huge, public company.
+![Full Dashboard Overview](https://github.com/user-attachments/assets/ea76850a-d721-4d13-94f7-91eb77e2d1e1)
 
 ---
 
-## The Scraping Process
+## Key Analytical Insights
+
+### 1. Global Hub Concentration
+The data highlights a significant geographic centralisation within the United States. Despite the rise of global entrepreneurship, the US remains the primary epicenter for venture-backed talent. Notably, **San Francisco accounts for approximately 43% of all companies** in the dataset, underscoring the enduring importance of proximity to capital and specialized talent pools.
+
+![Geographical Concentration Map](https://github.com/user-attachments/assets/343d4546-5c6e-4c96-9cf9-b17d3c55d760)
+
+### 2. Strategic Shift to B2B and SaaS
+Analysis of industry trends over time reveals a maturation of the startup ecosystem. Early YC batches featured a higher proportion of consumer-facing applications. However, modern cohorts show a clear pivot toward **B2B (Business-to-Business) and SaaS (Software as a Service)** models. This shift indicates a move toward high-retention enterprise solutions over more volatile consumer markets.
+
+![Industry Shift Trends](https://github.com/user-attachments/assets/ede107f5-25e7-4447-8793-35cda03903d6)
+
+### 3. Sustainability of Remote Operations
+While the 2021 pandemic triggered a massive spike in remote-first startups, the trend has established a new baseline rather than reverting to pre-2020 levels. Currently, **roughly 30% of new startups** choose remote operations, suggesting that distributed teams have evolved into a viable, long-term structural strategy for early-stage companies.
+
+![Remote vs Office Trends](https://github.com/user-attachments/assets/850d0ba0-bb0f-4ee2-ac8d-1451e8d7beac)
+
+### 4. Long-term Survival and Cohort Analysis
+Survival metrics require a multi-year lens to reach statistical significance. While recent batches (2023-2024) show high survival rates (>90%), historical data from 2010-2015 shows that **long-term survival stabilizes around 70%**. This 10-year window is the typical horizon for acquisition, IPO, or market exit.
+
+![Survival and Acquisition Cohorts](https://github.com/user-attachments/assets/922b151a-4719-4e67-8a53-36be55b48138)
+
+### 5. Vertical Growth of Artificial Intelligence
+Artificial Intelligence has transitioned from a niche category to a foundational requirement. Since late 2022, the growth curve for AI-focused startups has outpaced all other sectors in YC history. AI is increasingly integrated as a core feature of the tech stack across all industries rather than being treated as a standalone vertical.
+
+![YoY Growth by Technology](https://github.com/user-attachments/assets/9b78b883-d8e7-4e73-8f64-1e2e55dffd33)
+
+### 6. Lean Team Efficiency
+The headcount required to launch and scale a startup is decreasing. Historically, team sizes were larger at the early stages; however, modern startups are frequently launched by **lean teams of 2 to 3 founders**. The proliferation of AI-assisted development tools and automated infrastructure is enabling "high-output, low-headcount" efficiency.
+
+![Average Team Size Evolution](https://github.com/user-attachments/assets/4bdb9ca7-4ffe-44c7-a86f-33142c0ed4bb)
+
+### 7. Sector-Specific Risk Assessment
+The data reveals clear risk/reward profiles across sectors. High-volatility sectors like **Social Media show failure rates exceeding 50%**, whereas highly regulated or technical sectors such as **Healthcare and Biotech show higher rates of public exit**. This suggests that while barriers to entry are higher in specialized sectors, their long-term stability is significantly greater.
+
+![Sector Risk/Reward Scatter Plot](https://github.com/user-attachments/assets/a427642e-660e-48c4-bba1-40e04e0311f5)
+
+---
+
+## Technical Architecture
 
 ### Stage 1: API-Driven Extraction (`yc_scraper.py`)
-Instead of traditional "point-and-click" scraping, this script interacts directly with YC's search engine (**Algolia**).
-1.  **API Key Discovery**: Uses Selenium (headless) to visit the YC directory and capture the short-lived `x-algolia-api-key` from network logs.
-2.  **Batch Discovery**: Queries the API to identify all YC batches (e.g., "Winter 2024", "Summer 2005").
-3.  **Batch-by-Batch Fetching**: Iterates through each batch to retrieve unique company records. This bypasses the 1,000-result limit imposed on global searches.
-4.  **Checkpoint System**: Saves results for each batch to JSON in the `checkpoints/` folder, allowing for resumes if interrupted.
+This stage bypasses traditional UI scraping to prevent data loss from pagination limits.
+- **API Interception**: Uses Selenium to capture short-lived `x-algolia-api-key` headers from network traffic.
+- **Facet Discovery**: Identifies all YC batches (e.g., Summer 2005) to scope queries.
+- **Batch Processing**: Fetches records batch-by-batch, ensuring 100% coverage of the directory.
+- **Resilience**: Implements a JSON-based checkpoint system to allow for resuming interrupted operations.
 
 ### Stage 2: Deep Enrichment (`yc_details_scraper.py`)
-Once the base list is created, we perform high-resolution scraping of individual company profile pages.
-* **Technology**: Uses `BeautifulSoup` and `Requests` with randomized delays to respect `robots.txt` and server load.
-* **Fields Extracted**: 
-    * **Founded**: Extracting the exact year the company started.
-    * **Status**: Identifying if the company is "Active", "Acquired", or "Inactive".
-    * **Team Size**: Validating team size data from the profile pages.
-
----
-
-## Project Structure
-* `yc_scraper.py`: The core API extraction script.
-* `yc_details_scraper.py`: The enrichment script for profile-level data.
-* `yc_companies.csv`: The final output dataset.
-* `requirements.txt`: List of Python dependencies for reproducibility.
-* `.gitignore`: Ensuring cache, temporary checkpoints, and secrets are not pushed to Git.
+Enriches the structural data with high-resolution details via individual profile parsing.
+- **HTML Parsing**: Uses BeautifulSoup to extract fields not available in the primary API.
+- **Adaptive Delays**: Implements randomized wait times to respect server load and `robots.txt` guidelines.
+- **Data Points**: Extracts exact founding year, operational status, and verified team sizes.
 
 ---
 
@@ -97,30 +79,32 @@ Once the base list is created, we perform high-resolution scraping of individual
 | **Company Name** | Legal or trading name of the startup. | Algolia API |
 | **Batch** | The YC funding cycle (e.g., W24, S05). | Algolia API |
 | **Industry** | Functional sector of the company. | Algolia API |
-| **Company Country** | Country of headquarters. | Algolia API (Parsed) |
+| **Company Country** | Country of headquarters (Parsed). | Algolia API |
 | **Founded** | The year the company was established. | Profile Page |
-| **Team Size** | Number of employees. | API / Profile Page |
-| **Company Status** | Current status (Active, Acquired, etc.). | Profile Page |
-| **Company Link** | URL to the YC profile page. | Generated Slug |
+| **Team Size** | Number of current employees. | API / Profile Page |
+| **Company Status** | Operational status (Active, Acquired, Inactive). | Profile Page |
+| **Company Link** | Verifiable YC profile URL. | Generated Slug |
 
 ---
 
-## How to Run
+## Setup and Execution
 
-1.  **Install dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
+### 1. Prerequisite Installation
+```bash
+pip install -r requirements.txt
+```
 
-2.  **Run the base scraper**:
-    ```bash
-    python yc_scraper.py
-    ```
+### 2. Phase 1: Structural Scraping
+```bash
+python yc_scraper.py
+```
 
-3.  **Run the enrichment scraper**:
-    ```bash
-    python yc_details_scraper.py
-    ```
+### 3. Phase 2: Data Enrichment
+```bash
+python yc_details_scraper.py
+```
 
 ---
-*Note: This scraper was built for educational purposes and respects YC's directory structure and robots.txt. Always ensure ethical scraping practices.*
+
+## Ethical Disclosure
+This project was developed for educational purposes to demonstrate advanced data extraction and analysis techniques. The systems built respect the target directory's structure and `robots.txt` constraints. Users are encouraged to maintain ethical scraping standards.
